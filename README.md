@@ -1,5 +1,5 @@
 *Peti1*
-~~ Peti2 ~~
+~~Peti2~~
 **Peti3**
 
 
