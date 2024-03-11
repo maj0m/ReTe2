@@ -8,5 +8,5 @@ public interface TrainSensor {
 
 	void tableNextVal();
 
-	public int getTableSize()
+	public int getTableSize();
 }

@@ -29,7 +29,7 @@ public class TrainSensorImpl implements TrainSensor {
 		table.put(sysTime, "reference speed", controller.getReferenceSpeed());
 	}
 
-	public int tableSize() {
+	public int getTableSize() {
 		return table.size(); 
 	}
 
