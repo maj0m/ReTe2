@@ -14,6 +14,7 @@ public class TrainSystemTest {
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
+
 	
 	@Before
 	public void before() {
@@ -33,6 +34,15 @@ public class TrainSystemTest {
 	}
 
 	@Test
+	public void TableAdd_Test() {
+		int tableSize = sensor.getTableSize();
+
+		sensor.tableNextVal();
+
+		Assert.assertEquals(tableSize + 2, sensor.getTableSize());
+	}
+
+	@Test
 	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
 		sensor.overrideSpeedLimit(10);
 
@@ -47,6 +57,8 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		Assert.assertEquals(10, controller.getReferenceSpeed());
 	}
+
+
 
 	@Test
 	public void OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero() {
