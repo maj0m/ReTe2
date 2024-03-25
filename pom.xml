@@ -7,12 +7,12 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<sonar.organization>maj0m</sonar.organization>
-  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.organization>rockar787</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
     <packaging>pom</packaging>
-
+	
     <modules>
         <module>train-interfaces</module>
         <module>train-controller</module>
@@ -28,7 +28,14 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+			
         </dependency>
+		<dependency>
+	<groupId>org.jacoco</groupId>
+	<artifactId>jacoco-maven-plugin</artifactId>
+	<version>0.8.7</version>
+	<scope>test</scope>
+	</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
@@ -51,6 +58,26 @@
 
 	<build>
 		<plugins>
+		<plugin>
+<groupId>org.jacoco</groupId>
+<artifactId>jacoco-maven-plugin</artifactId>
+<version>0.8.7</version>
+<executions>
+<execution>
+<id>default-prepare-agent</id>
+<goals>
+<goal>prepare-agent</goal>
+</goals>
+</execution>
+<execution>
+<id>default-report</id>
+<phase>prepare-package</phase>
+<goals>
+<goal>report</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
