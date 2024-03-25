@@ -6,7 +6,7 @@ public interface TrainSensor {
 
 	void overrideSpeedLimit(int speedLimit);
 
-	void tableNextVal();
+	void TachographEntry();
 
-	public int getTableSize();
+	Boolean IsTachographEmpty();
 }
