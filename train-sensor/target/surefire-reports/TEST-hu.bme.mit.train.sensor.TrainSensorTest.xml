@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="hu.bme.mit.train.sensor.TrainSensorTest" time="0.532" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="hu.bme.mit.train.sensor.TrainSensorTest" time="1.786" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.18+10-post-Ubuntu-0ubuntu118.04.1"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/cloud/base"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/cloud/swag/ReTe2"/>
     <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/cloud/base"/>
+    <property name="user.dir" value="/home/cloud/swag/ReTe2"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="11.0.18+10-post-Ubuntu-0ubuntu118.04.1"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
@@ -60,8 +60,8 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="overrideSpeedLimit_TooFastSpeed" time="0.529"/>
-  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="overrideSpeedLimit_LargeDifference" time="0.002"/>
-  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="overrideSpeedLimit_NegativeSpeed" time="0"/>
+  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="overrideSpeedLimit_InValidSpeed" time="1.779"/>
+  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="overrideSpeedLimit_TooLargeJump" time="0.003"/>
+  <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="overrideSpeedLimit_TooFast" time="0.003"/>
   <testcase classname="hu.bme.mit.train.sensor.TrainSensorTest" name="overrideSpeedLimit_ValidSpeed" time="0.001"/>
 </testsuite>

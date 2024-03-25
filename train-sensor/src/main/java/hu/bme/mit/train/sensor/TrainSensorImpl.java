@@ -32,7 +32,6 @@ public class TrainSensorImpl implements TrainSensor {
 		if(speedLimit < 0 || speedLimit > 500 ||
 			this.speedLimit - this.speedLimit * 0.5f > speedLimit) {
 				user.setAlarmState(true);
-				return;
 			}
 
 		this.speedLimit = speedLimit;

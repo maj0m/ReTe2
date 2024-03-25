@@ -26,23 +26,24 @@ public class TrainSensorTest {
     @Test
     public void overrideSpeedLimit_ValidSpeed() {
         sensor.overrideSpeedLimit(100);
+
         verify(user, times(0)).setAlarmState(true);
     }
 
     @Test
-    public void overrideSpeedLimit_NegativeSpeed() {
+    public void overrideSpeedLimit_InValidSpeed() {
         sensor.overrideSpeedLimit(-10);
         verify(user, times(1)).setAlarmState(true);
     }
 
     @Test
-    public void overrideSpeedLimit_TooFastSpeed() {
+    public void overrideSpeedLimit_TooFast() {
         sensor.overrideSpeedLimit(501);
         verify(user, times(1)).setAlarmState(true);
     }
 
     @Test
-    public void overrideSpeedLimit_LargeDifference() {
+    public void overrideSpeedLimit_TooLargeJump() {
         sensor.overrideSpeedLimit(120);
         sensor.overrideSpeedLimit(30);
         verify(user, times(1)).setAlarmState(true);
