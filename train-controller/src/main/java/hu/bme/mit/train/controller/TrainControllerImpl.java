@@ -38,6 +38,7 @@ public class TrainControllerImpl implements TrainController {
 
 	public void EmergencyBreaking() {
 		setSpeedLimit(0);
+		//swag
 		return;
 	}
 
